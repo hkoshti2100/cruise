@@ -1,0 +1,150 @@
+@use "sass:meta";
+@use "sass:list";
+@use "sass:map";
+@use "sass:math";
+
+// LAYOUTS
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin square($length) {
+	width: $length;
+	height: $length;
+}
+
+@mixin circle($length) {
+	width: $length;
+	height: $length;
+	border-radius: 50%;
+}
+
+@mixin flex($main: null, $cross: center) {
+	display: flex;
+	justify-content: $main;
+	align-items: $cross;
+}
+
+@mixin inline-flex($main: null, $cross: center) {
+	display: inline-flex;
+	justify-content: $main;
+	align-items: $cross;
+}
+
+@mixin margin-gap($gap: 1rem, $direction: row, $element: "*") {
+	$spacing: (
+		row: left,
+		column: top
+	);
+
+	$directions: map.keys($spacing);
+
+	@if not $element {
+		@error "Invalid arg $element: #{ $element }! Use valid CSS selectors to target an Element!";
+	}
+
+	@if not list.index($directions, $direction) {
+		@error "Invalid arg $direction: #{ $direction }! Use a valid direction: #{ $directions }";
+	}
+
+	$margin-direction: map.get($spacing, $direction);
+
+	& > #{ $element } {
+		margin-#{ $margin-direction }: $gap;
+	}
+
+	& > #{ $element }:first-child {
+		margin-#{ $margin-direction }: 0;
+	}
+}
+
+@mixin margin-gap-all($gap: 1rem, $direction: row, $element: "*") {
+	$spacing: (
+		row: left,
+		column: top
+	);
+
+	$directions: map.keys($spacing);
+
+	@if not $element {
+		@error "Invalid arg $element: #{ $element }! Use valid CSS selectors to target an Element!";
+	}
+
+	@if not list.index($directions, $direction) {
+		@error "Invalid arg $direction: #{ $direction }! Use a valid direction: #{ $directions }";
+	}
+
+	$margin: map.get($spacing, $direction);
+
+	& > #{ $element } {
+		margin-#{ $margin }: $gap;
+	}
+}
+
+@mixin inset($inset: 0) {
+	left: $inset;
+	top: $inset;
+	right: $inset;
+	bottom: $inset;
+}
+
+@mixin hide-below($breakpoint) {
+	@at-root {
+		@media (max-width: $breakpoint) {
+			& {
+				display: none;
+			}
+		}
+	}
+}
+
+@mixin hide-above($breakpoint) {
+	@at-root {
+		@media (min-width: $breakpoint) {
+			& {
+				display: none;
+			}
+		}
+	}
+}
+
+@mixin margin-block($top, $bottom: null) {
+	@if not $bottom {
+		margin-top: $top;
+		margin-bottom: $top;
+	} @else {
+		margin-top: $top;
+		margin-bottom: $bottom;
+	}
+}
+
+@mixin margin-inline($left, $right: null) {
+	@if not $right {
+		margin-left: $left;
+		margin-right: $left;
+	} @else {
+		margin-left: $left;
+		margin-right: $right;
+	}
+}
+
+@mixin padding-block($top, $bottom: null) {
+	@if not $bottom {
+		padding-top: $top;
+		padding-bottom: $top;
+	} @else {
+		padding-top: $top;
+		padding-bottom: $bottom;
+	}
+}
+
+@mixin padding-inline($left, $right: null) {
+	@if not $right {
+		padding-left: $left;
+		padding-right: $left;
+	} @else {
+		padding-left: $left;
+		padding-right: $right;
+	}
+}

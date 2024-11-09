@@ -1,0 +1,57 @@
+@use "../lib/functions.scss" as *;
+
+:root {
+	// ================ COLORS ================
+	--color-light: white;
+	--color-tone-10: #E6E6E6;
+	--color-tone-20: #CCCCCC;
+	--color-tone-30: #B3B3B3;
+	--color-tone-40: #999999;
+	--color-tone-50: #808080;
+	--color-tone-60: #666666;
+	--color-tone-70: #4D4D4D;
+	--color-tone-80: #333333;
+	--color-tone-90: #1A1A1A;
+	--color-dark: black;
+
+	// --color-primary: ;
+	// --color-secondary: ;
+	// --color-accent: ;
+
+	--color-text: var(--color-dark);
+	--color-bg: var(--color-light);
+
+	// ================ TYPOGRAPHY ================
+	--font-sans-serif: sans-serif;
+	// --font-serif: ;
+	// --font-monospace: monospace;
+	// --font-script: ;
+	// --font-display: ;
+
+	--font-primary: var(--font-sans-serif);
+	// --font-code: ;
+
+	// ================ ICONOGRAPHY ================
+
+	// ================ CHRONO ================
+	--duration-base: 250ms;
+	--duration-fast: var(--duration-base);
+	--duration-medium: calc(var(--duration-base) * 2);
+	--duration-slow: calc(var(--duration-base) * 3);
+
+	--duration-enter: var(--duration-medium);
+	--duration-leave: var(--duration-slow);
+
+	// ================ EFFECTS ================
+
+	// ================ LAYOUTS ================
+
+	// 320px
+	// 480px
+	// 540px
+	// 768px
+	// 920px
+	// 1024px
+	// 1200px
+	// 1440px
+}

@@ -1,0 +1,18 @@
+%pill-shape {
+	border-radius: 100vmax;
+}
+
+%base-typography {
+	font-family: var(--font-primary);
+}
+
+%button-reset {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+%link-reset {
+	text-decoration: none;
+	color: currentColor;
+}

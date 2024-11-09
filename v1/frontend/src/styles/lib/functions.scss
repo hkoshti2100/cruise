@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "sass:map";
+
+@function rem($value, $rem-size: 16px) {
+	$lengths-map: (
+		"px": 1px,
+		"in": 96px,
+		"cm": math.div(96px, 2.54),
+		"mm": math.div(96px, 25.4),
+		"pc": math.div(96px, 6),
+		"pt": math.div(96px, 72),
+		"Q": math.div(96px, 101.6)
+	);
+
+	$unit: math.unit($value);
+	
+	@if $unit == "rem" {
+		@return $value;
+	}
+
+	@if math.is-unitless($value) or not map.has-key($lengths-map, $unit) {
+		@error "Invalid arg $value: #{ $value }! Expected a number with absolute unit (px, in, cm, mm, pc, pt, Q)!";
+	}
+
+	@if math.is-unitless($rem-size) or math.unit($rem-size) != "px" {
+		@error "Invalid arg $rem-size: #{ $rem-size }! Expected a number with px unit only!";
+	}
+
+	$value-in-px: math.div($value, $value * 0 + 1) * map.get($lengths-map, $unit);
+	$value-in-rem: math.div($value-in-px, $rem-size) * 1rem;
+
+	@return $value-in-rem;
+}
