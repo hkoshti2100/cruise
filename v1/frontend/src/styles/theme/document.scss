@@ -25,3 +25,18 @@ body {
 body > main {
 	@include padding-block(1rem);
 }
+
+#ad-premium {
+	@include padding-inline(2rem);
+
+	@include flex(center);
+	flex-direction: column;
+	gap: 1rem;
+	text-align: center;
+
+	> .ad-description {
+		color: var(--color-tone-50);
+		font-weight: 500;
+		font-style: italic;
+	}
+}
