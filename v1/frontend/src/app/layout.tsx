@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import type { ChildrenProps } from "@/types/props"
+import { Header, SideBar, ActivityBar } from "@/components"
 import "@/styles/global.scss"
 import "@/styles/theme.scss"
 
@@ -24,13 +25,18 @@ export default function RootLayout(props: ChildrenProps) {
 	return (
 		<html lang="en">
 			<body>
-				<header></header>
+				<Header />
 
-				<main>
-					{ props.children }
+				<main className="container-main grid-main">
+					<SideBar />
+
+					<div id="main-content">
+						{ props.children }
+					</div>
+
+					<ActivityBar />
 				</main>
 
-				<footer></footer>
 			</body>
 		</html>
 	)

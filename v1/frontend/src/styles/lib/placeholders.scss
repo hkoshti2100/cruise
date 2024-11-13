@@ -4,6 +4,7 @@
 
 %base-typography {
 	font-family: var(--font-primary);
+	font-weight: 500;
 }
 
 %button-reset {
@@ -15,4 +16,10 @@
 %link-reset {
 	text-decoration: none;
 	color: currentColor;
+}
+
+%text-input-reset {
+	background-color: transparent;
+	border: 0;
+	outline: 0;
 }

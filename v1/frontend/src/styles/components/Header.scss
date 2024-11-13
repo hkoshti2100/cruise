@@ -1,0 +1,21 @@
+@use "@/styles/lib/mixins" as *;
+@use "@/styles/lib/placeholders";
+
+#header-prime {
+	@include padding-block(1rem);
+
+	.logo-prime {
+		@extend %link-reset;
+		place-self: center;
+		color: var(--color-accent)
+	}
+
+	nav {
+		@include flex(space-between);
+	}
+
+	.user-profile {
+		place-self: center end;
+	}
+}
+

@@ -1,0 +1,22 @@
+@use "@/styles/lib/mixins" as *;
+@use "@/styles/lib/placeholders" as *;
+
+#search-bar-prime {
+	padding: 0.5em 1em;
+	@include flex();
+	gap: 1em;
+
+	border-radius: 100px;
+	background-color: var(--color-tone-10);
+	color: var(--color-tone-50);
+
+	&:focus-within {
+		@include focus-effect;
+		color: var(--color-text);
+	}
+}
+
+#search-prime {
+	@extend %text-input-reset;
+	@extend %base-typography;
+}

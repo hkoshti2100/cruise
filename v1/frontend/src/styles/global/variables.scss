@@ -16,13 +16,16 @@
 
 	// --color-primary: ;
 	// --color-secondary: ;
-	// --color-accent: ;
+	--color-accent: #2C99FF;
+
+	--color-error: #F55959;
 
 	--color-text: var(--color-dark);
-	--color-bg: var(--color-light);
+	--color-bg: #D1DEEC;
+	--color-bg-container: var(--color-light);
 
 	// ================ TYPOGRAPHY ================
-	--font-sans-serif: sans-serif;
+	--font-sans-serif: "Montserrat", sans-serif;
 	// --font-serif: ;
 	// --font-monospace: monospace;
 	// --font-script: ;
@@ -31,7 +34,34 @@
 	--font-primary: var(--font-sans-serif);
 	// --font-code: ;
 
+	--text-tiny: #{ rem(12px) };
+	--text-small: #{ rem(14px) };
+	--text-regular: #{ rem(16px) };
+	--text-medium: #{ rem(18px) };
+	--text-large: #{ rem(24px) };
+	--text-huge: #{ rem(32px) };
+
+	--display-small: #{ rem(36px) };
+	--display-medium: #{ rem(48px) };
+	--display-large: #{ rem(60px) };
+
+	--leading-none: 1;
+	--leading-small: 1.15;
+	--leading-medium: 1.5;
+	--leading-large: 1.67;
+
+	--leading-text: var(--leading-medium);
+
+	--color-placeholder: var(--color-tone-50);
+
 	// ================ ICONOGRAPHY ================
+	--thickness-rule: #{ rem(2px) };
+
+	--icon-text: 1em;
+	--icon-small: #{ rem(16px) };
+	--icon-regular: #{ rem(24px) };
+	--icon-medium: #{ rem(32px) };
+	--icon-large: #{ rem(48px) };
 
 	// ================ CHRONO ================
 	--duration-base: 250ms;
@@ -43,6 +73,7 @@
 	--duration-leave: var(--duration-slow);
 
 	// ================ EFFECTS ================
+	--shadow-container: 2px 2px 16px rgba(0, 0, 0, 0.2);
 
 	// ================ LAYOUTS ================
 

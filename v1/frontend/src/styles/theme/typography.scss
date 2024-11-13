@@ -1,0 +1,44 @@
+@use "@/styles/lib/mixins" as *; 
+
+// ICONS
+$icon-size-map: (
+	text: var(--icon-text),
+	small: var(--icon-small),
+	regular: var(--icon-regular),
+	medium: var(--icon-medium),
+	large: var(--icon-large)
+);
+
+@include iconography($icon-size-map, "svg.icon");
+
+// TYPOGRAPHY
+$text-size-map: (
+	tiny: var(--text-tiny),
+	small: var(--text-small),
+	regular: var(--text-regular),
+	medium: var(--text-medium),
+	large: var(--text-large),
+	huge: var(--text-huge)
+);
+
+$display-size-map: (
+	small: var(--display-small),
+	medium: var(--display-medium),
+	large: var(--display-large)
+);
+
+@include typography($text-size-map, ".text") {
+	line-height: var(--leading-text);
+}
+
+@include typography($display-size-map, ".display") {
+	font-weight: 600;
+}
+
+.error-message {
+	color: var(--color-error);
+}
+
+.info-message {
+	color: var(--color-accent);
+}

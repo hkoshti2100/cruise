@@ -148,3 +148,25 @@
 		padding-right: $right;
 	}
 }
+
+@mixin typography($map, $prefix) {
+	@each $scale, $size in $map {
+		#{ $prefix }-#{ $scale } {
+			font-size: $size;
+			@content;
+		}
+	}
+}
+
+@mixin iconography($map, $prefix) {
+	@each $scale, $size in $map {
+		#{ $prefix }-#{ $scale } {
+			@include square($size);
+			@content;
+		}
+	}
+}
+
+@mixin focus-effect {
+	outline: 2px solid var(--color-accent);
+}

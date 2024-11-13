@@ -1,6 +1,6 @@
 export default function Home() {
 	return (
-		<section id="route-home-main" className="container-main">
+		<section id="route-home-main">
 			HOME
 		</section>
 	)

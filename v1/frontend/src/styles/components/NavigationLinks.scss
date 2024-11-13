@@ -1,0 +1,45 @@
+@use "@/styles/lib/mixins" as *;
+@use "@/styles/lib/placeholders";
+
+.navigation-links {
+	@include flex();
+	gap: 1em;
+}
+
+.navigation-link {
+	@extend %link-reset;
+
+	@include inline-flex();
+	gap: 1em;
+
+	> .link-icon-default {
+		display: flex;
+	}
+
+	> .link-icon-current {
+		display: none;
+	}
+
+	> .link-label {
+		display: none;
+	}
+
+	&.current {
+		padding: 0.5em 1em;
+		color: var(--color-accent);
+		border-radius: 100vmax;
+		background-color: var(--color-tone-10);
+
+		> .link-icon-default {
+			display: none;
+		}
+
+		> .link-icon-current {
+			display: flex;
+		}
+
+		> .link-label {
+			display: revert;
+		}
+	}
+}

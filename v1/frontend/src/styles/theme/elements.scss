@@ -1,3 +1,6 @@
+@use "@/styles/lib/mixins" as *;
+@use "@/styles/lib/placeholders";
+
 .container-main {
 	width: 90%;
 	max-width: 1280px;
@@ -6,6 +9,74 @@
 	margin-right: auto;
 }
 
+.header-ui {
+	background-color: var(--color-bg-container);
+	box-shadow: var(--shadow-container);
+}
+
+.container-ui {
+	padding: 0.5rem;
+	@extend .header-ui;
+	border-radius: 1rem;
+}
+
 .fixed-element {
 	position: fixed;
+}
+
+.logo-prime > div {
+	@include inline-flex();
+	gap: 1rem;
+}
+
+.grid-main {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	gap: 1rem;
+}
+
+.h-rule {
+	min-width: var(--icon-regular);
+	height: var(--thickness-rule);
+	background-color: var(--color-tone-40);
+}
+
+.v-rule {
+	width: var(--thickness-rule);
+	min-height: var(--icon-regular);
+	background-color: var(--color-tone-30);
+}
+
+button.variant {
+	@extend %button-reset;
+	@extend %base-typography;
+
+	&.primary {
+		padding: 0.5em 1em;
+		@include inline-flex();
+		gap: 1em;
+
+		border: 1px solid currentColor;
+
+		@extend %pill-shape;
+	}
+
+	&.secondary {
+		background-color: red;
+	}
+
+	&.iconic {
+		display: flex;
+	}
+
+	&.floating {
+		position: absolute;
+		@include circle(48px);
+		@include flex(center);
+		background-color: var(--color-bg);
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+	}
 }
