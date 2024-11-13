@@ -1,0 +1,10 @@
+@use "@/styles/lib/mixins" as *;
+
+#ad-google {
+	@include margin-gap(0.5rem, column);
+
+	> .ad-title {
+		padding: 0.5rem;
+		@include flex(space-between);
+	}
+}

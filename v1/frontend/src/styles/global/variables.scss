@@ -76,6 +76,8 @@
 	--shadow-container: 2px 2px 16px rgba(0, 0, 0, 0.2);
 
 	// ================ LAYOUTS ================
+	--radius-inner: 0.5rem;
+	--radius-outer: calc(var(--radius-inner) * 2);
 
 	// 320px
 	// 480px
