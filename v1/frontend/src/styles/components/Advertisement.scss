@@ -3,8 +3,7 @@
 #ad-google {
 	@include margin-gap(0.5rem, column);
 
-	> .ad-title {
-		padding: 0.5rem;
+	.ad-title {
 		@include flex(space-between);
 	}
 }

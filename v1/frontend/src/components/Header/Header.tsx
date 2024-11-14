@@ -1,5 +1,6 @@
 import { Link, Logo, SearchBar } from "@/elements"
-import { NavigationLinks, UserAccountButton } from "@/components"
+import { UserAccountButton } from "@/components"
+import NavigationLinks from "./NavigationLinks"
 import { routes } from "@/utils/common"
 import "@/styles/components/Header.scss"
 

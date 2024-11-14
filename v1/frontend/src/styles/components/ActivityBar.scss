@@ -1,5 +1,24 @@
+@use "@/styles/lib/mixins" as *;
+
 #activity-bar {
 	display: grid;
 	grid-template-rows: 1fr auto;
 	gap: 1rem;
+}
+
+.activity-trend {
+	@include margin-gap-all(1em, column);
+}
+
+.trend-topic {
+	@include margin-gap(0.5em, column);
+
+	position: relative;
+}
+
+.trend-topic-action {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
 }

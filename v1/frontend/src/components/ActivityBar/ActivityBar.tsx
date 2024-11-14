@@ -1,11 +1,12 @@
-import "@/styles/components/ActivityBar.scss"
+import Trending from "./Trending"
 import { Advertisement } from "@/components"
+import "@/styles/components/ActivityBar.scss"
 
 export default function ActivityBar() {
 	return (
 		<div id="activity-bar">
 
-			<div id="trending-bar" className="container-ui"></div>
+			<Trending />
 			<Advertisement.Google />
 
 		</div>

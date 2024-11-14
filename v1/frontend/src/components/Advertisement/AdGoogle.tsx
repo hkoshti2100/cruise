@@ -1,7 +1,7 @@
 export default function AdGoogle() {
 	return (
 		<div id="ad-google" className="container-ui">
-			<p className="ad-title">
+			<p className="ad-title container-ui-content container-ui-title">
 				Suggested for you
 
 				<img
@@ -10,7 +10,7 @@ export default function AdGoogle() {
 				/>
 			</p>
 
-			<div className="ad-banner">
+			<div className="ad-banner flex-correct">
 				<img
 					src="images/ad-banner-spotify.png"
 					alt="spotify"

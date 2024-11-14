@@ -42,3 +42,8 @@ $display-size-map: (
 .info-message {
 	color: var(--color-accent);
 }
+
+.sub-text {
+	color: var(--color-tone-50);
+	font-size: var(--text-tiny);
+}

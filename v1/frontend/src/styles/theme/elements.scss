@@ -20,6 +20,14 @@
 	border-radius: var(--radius-outer);
 }
 
+.container-ui-content {
+	padding: 0.5rem;
+}
+
+.container-ui-title {
+	font-size: var(--text-medium);
+}
+
 .fixed-element {
 	position: fixed;
 }
@@ -38,13 +46,13 @@
 .h-rule {
 	min-width: var(--icon-regular);
 	height: var(--thickness-rule);
-	background-color: var(--color-tone-40);
+	background-color: var(--color-tone-10);
 }
 
 .v-rule {
 	width: var(--thickness-rule);
 	min-height: var(--icon-regular);
-	background-color: var(--color-tone-30);
+	background-color: var(--color-tone-10);
 }
 
 button.variant {
