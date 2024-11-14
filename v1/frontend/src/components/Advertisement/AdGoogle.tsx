@@ -10,9 +10,9 @@ export default function AdGoogle() {
 				/>
 			</p>
 
-			<div className="ad-banner flex-correct">
+			<div className="ad-banner">
 				<img
-					src="images/ad-banner-spotify.png"
+					src="/images/ad-banner-spotify.png"
 					alt="spotify"
 					className="ad-image rounded-inner"
 				/>

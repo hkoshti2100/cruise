@@ -16,6 +16,11 @@
 
 	.user-profile {
 		place-self: center end;
+
+		> img {
+			@include margin-inline(1.5rem);
+			@include circle(2.5rem);
+		}
 	}
 }
 

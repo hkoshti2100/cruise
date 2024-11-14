@@ -75,7 +75,8 @@ button.variant {
 	}
 
 	&.iconic {
-		display: flex;
+		@include flex();
+		gap: 0.75em;
 	}
 
 	&.floating {
@@ -90,6 +91,15 @@ button.variant {
 	}
 }
 
-.temp-placeholder-image {
+.todo-placeholder-image {
 	background-color: var(--color-tone-20);
+	width: 100%;
+}
+
+a.button-primary {
+	@extend %link-reset;
+	display: inline-block;
+	padding: 0.75em 1em;
+	background-color: var(--color-accent);
+	color: var(--color-light);
 }

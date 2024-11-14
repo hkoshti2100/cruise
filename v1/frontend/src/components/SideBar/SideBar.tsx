@@ -5,7 +5,7 @@ export default function SideBar() {
 	return (
 		<aside id="sidebar-main">
 
-			<UserProfile />
+			<UserProfile.Overview />
 			<Advertisement.Premium />
 
 		</aside>

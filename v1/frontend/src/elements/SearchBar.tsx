@@ -1,12 +1,11 @@
 import { SearchIcon } from "@/assets/icons"
-import "@/styles/elements/SearchBar.scss"
+import { TextInput } from "@/elements"
 
 export default function SearchBar() {
 	return (
 		<div id="search-bar-prime">
-			<SearchIcon className="icon-text" />
-
-			<input
+			<TextInput
+				icon={ <SearchIcon className="icon-text" /> }
 				type="text"
 				id="search-prime"
 				placeholder="Search"

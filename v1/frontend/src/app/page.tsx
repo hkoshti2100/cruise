@@ -1,7 +1,11 @@
+import { Post } from "@/components"
+
 export default function Home() {
 	return (
 		<section id="route-home-main">
-			HOME
+			<Post.Create />
+
+			{/* <FeedPosts /> */}
 		</section>
 	)
 }

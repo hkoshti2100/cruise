@@ -1,7 +1,7 @@
 @use "@/styles/lib/mixins" as *;
 @use "@/styles/lib/placeholders" as *;
 
-#search-bar-prime {
+.text-input {
 	padding: 0.5em 1em;
 	@include flex();
 	gap: 1em;
@@ -14,9 +14,9 @@
 		@include focus-effect;
 		color: var(--color-text);
 	}
-}
 
-#search-prime {
-	@extend %text-input-reset;
-	@extend %base-typography;
+	> input[type=text] {
+		@extend %text-input-reset;
+		@extend %base-typography;
+	}
 }

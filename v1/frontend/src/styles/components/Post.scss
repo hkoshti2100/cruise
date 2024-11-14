@@ -1,0 +1,24 @@
+@use "@/styles/lib/mixins" as *;
+
+#create-post-form {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 1rem;
+
+	> .current-user {
+		@include circle(2.25rem);
+	}
+}
+
+.create-post-content {
+	@include margin-gap(1rem, column);
+}
+
+.create-post-options {
+	@include flex();
+	gap: 2em;
+
+	> button[type=submit] {
+		margin-left: auto;
+	}
+}

@@ -1,0 +1,57 @@
+@use "@/styles/lib/mixins" as *;
+@use "@/styles/lib/placeholders" as *;
+
+.text-area-container {
+	display: grid;
+
+	> .pseudo-content {
+		opacity: 0;
+		pointer-events: none;
+		white-space: pre-wrap;
+	}
+
+	> {
+		.pseudo-content,
+		textarea {
+			grid-area: 1 / 1 / 2 / 2;
+		}
+	}
+}
+
+.text-area {
+	padding: 0.5em 1em;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 1em;
+
+	max-height: 260px;
+	overflow-y: scroll;
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	border-radius: 1.125rem;
+	background-color: var(--color-tone-10);
+	color: var(--color-tone-50);
+
+	&:focus-within {
+		@include focus-effect;
+		color: var(--color-text);
+	}
+
+	> svg {
+		position: sticky;
+		top: 0;
+
+		place-self: center
+	}
+
+	textarea {
+		@extend %text-area-reset;
+		@extend %base-typography;
+		width: 100%;
+		height: auto;
+	}
+}
