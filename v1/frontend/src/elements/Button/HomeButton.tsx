@@ -8,7 +8,7 @@ export default function Home() {
 	const router = useRouter()
 
 	return (
-		<Button variant="primary" onClick={ () => router.push(routes.home) }>
+		<Button variant="secondary" onClick={ () => router.push(routes.home) }>
 			<HomeFalseIcon className="icon-text" />
 			Home
 		</Button>

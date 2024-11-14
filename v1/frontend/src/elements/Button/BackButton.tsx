@@ -7,7 +7,7 @@ export default function Back() {
 	const router = useRouter()
 
 	return (
-		<Button variant="primary" onClick={ () => router.back() }>
+		<Button variant="secondary" onClick={ () => router.back() }>
 			<ArrowLeftIcon className="icon-text" />
 			Back
 		</Button>

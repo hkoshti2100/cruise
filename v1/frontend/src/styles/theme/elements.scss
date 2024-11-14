@@ -59,18 +59,19 @@ button.variant {
 	@extend %button-reset;
 	@extend %base-typography;
 
-	&.primary {
+	&.secondary {
 		padding: 0.5em 1em;
 		@include inline-flex();
 		gap: 1em;
 
 		border: 1px solid currentColor;
-
-		@extend %pill-shape;
+		border-radius: var(--radius-inner);
 	}
 
-	&.secondary {
-		background-color: red;
+	&.primary {
+		padding: 0.75em 1em;
+		background-color: var(--color-accent);
+		color: var(--color-light);
 	}
 
 	&.iconic {
@@ -87,4 +88,8 @@ button.variant {
 	&:disabled {
 		cursor: not-allowed;
 	}
+}
+
+.temp-placeholder-image {
+	background-color: var(--color-tone-20);
 }
